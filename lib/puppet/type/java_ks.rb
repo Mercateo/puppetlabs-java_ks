@@ -144,9 +144,9 @@ Puppet::Type.newtype(:java_ks) do
   end
   
   newparam(:keytool_timeout) do
-    desc 'Timeout for the keytool command in seconds.'
+    desc "Timeout for the keytool command in seconds."
 
-    defaultto 0
+    defaultto '0'
   end
 
   # Where we setup autorequires.
