@@ -5,7 +5,7 @@ Puppet::Type.type(:java_ks).provide(:keytool) do
   desc 'Uses a combination of openssl and keytool to manage Java keystores'
 
   def command_keytool
-    'keytool'
+    "timeout #{resource[:keytool_timeout]} keytool"
   end
 
   # Keytool can only import a keystore if the format is pkcs12.  Generating and
